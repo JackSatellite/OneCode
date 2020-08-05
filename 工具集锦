@@ -13,3 +13,12 @@ Android中的骨架加载预览
 Android Studio 插件
  1、Freeline是阿里开发的一款快速编译插件
    集成方式：https://www.jianshu.com/p/1d801be3ee12
+2、GsonFormat
+将 Json 字符串快速转成 JavaBean 对象，免去我们根据 Json 字符串手写对应 Java Bean 的过程.
+
+3.Android Code Generator
+
+根据布局文件快速生成对应的Activity，Fragment，Adapter，Menu。
+
+参考地址：https://www.cnblogs.com/tsingke/p/9059747.html
+
