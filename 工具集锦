@@ -39,3 +39,69 @@ Total Control
 手机远程控制其他手机
 AirDroid
 
+抓包工具
+
+charles ， fiddler
+drony
+
+抓不到请求的现象
+我们经常在wifi设置中 设置代理到我们的pc http代理软件上，多数情况下，此时我们开启的app流量都可以在代理软件上看到，比如charles ， fiddler等等。 但是细心的人会发现 某些大厂的app 某些请求 在这些 http代理软件上就是抓不到， 给人的感觉就是 流量没从代理软件走一样。
+抓不到请求的原因
+大家都知道 http协议下层是tcp协议，tcp协议都是内置在操作系统里面的，我们最多只能使用tcp协议对外暴露的socket接口来进行编程， 我们是无法修改操作系统本身的tcp协议的实现的。
+但是http协议不同，http协议 都是各个开发者自己实现的， 换句话说 你要实现什么样的http客户端，这个客户端对http协议实现的好坏，实现了多少，支持哪些细节都是你自己决定的。 比如说android上 最有名的okhttp 就是一个http客户端的实现。
+既然是自己实现，那就有说法了，虽然你系统设置了代理，但是我完全可以不使用你的代理（或者说我压根就没实现http协议中 proxy的部分）。 这样自然就会像大厂中的某些app一样， 你虽然设置了代理 但是你还是无法抓包。 
+因为人家http协议的客户端 压根就没有使用你系统设置的 代理。
+看源码
+想明白这个，我们再带着目的 去看源码 就很简单了。
+首先okhttp 是肯定有实现http代理的部分的，否则我们每天也不可能使用代理 愉快的进行抓包。 那么既然有大厂的app 抓不到，那么肯定是某些属性 动态设置了。
+注意看下面的代码：
+
+如果我这样设置了，你就会发现 你的app的接口 也会抓不到了。
+继续看源码：
+
+注释说的很明白，大概意思就是当你设置了这个属性以后，我们就不会使用系统代理了。
+
+其实flutter也是有类似的功能，只不过okhttp 默认情况下是使用系统代理的，你要不想使用 你就必须写额外的代码，但是flutter是反过来的， flutter是默认就不使用系统代理，你要开启代理，必须在代码中进行设置：
+lass ProxyDio {
+  //填入你的代理地址
+  static const _PROXY_IP_ADDRESS = "10.12.65.66";
+  //填入你的代理端口号
+  static const _PROXY_PORT_NUM = "5000";
+
+  static Dio getProxyDio() {
+    var dio = Dio();
+    final adapter = dio.httpClientAdapter as DefaultHttpClientAdapter;
+    adapter.onHttpClientCreate = (client) {
+      // 设置该客户端的代理为指定的 ip:端口
+      client.findProxy = (uri) {
+        // localProxyIPAddress 和 localProxyPort 是在外部被忽略文件中定义, 方便各个开发者自行更改.
+        return "PROXY " + _PROXY_IP_ADDRESS + ":" + _PROXY_PORT_NUM;
+      };
+      // 安卓机上面证书授权:
+      client.badCertificateCallback = (cert, host, port) => true;
+    };
+    return dio;
+  }
+}
+
+复制代码
+特殊定制
+了解到 事情的来龙去脉以后，我们还需要思考1个问题，为什么大厂的app 是有些接口抓不到，有些接口 就能抓到呢？ 这里其实有3个原因。
+第一： webview
+webview 使用的http协议 显然跟我们的okhttp是不一样的。而webview使用的 http协议栈 默认都是c代码的实现，我们很难干预，从测试的情况来看，这个http协议栈的实现 是会使用默认系统代理的。 我暂时没找到 关闭这个功能的api，如果有小伙伴实现了 可以告诉我
+第二：可以针对性的对某些敏感接口 使用no_proxy,而其余接口保持正常。
+实际上okhttp做的非常强大，对于代理的设置 他可以做到针对 接口地址不同 而 使用不一样的设置。
+比如这种写法 和上面的no_proxy 就是差不多效果的
+
+再看看
+
+第三： 即使你使用了全局的no_proxy 代理，但是通常 我们的app里面都不会只有一个okhttp的 client，因为还有其他第三方的库引进来，他们的client 如果没有使用 no_proxy 那他们的接口 还是可以被抓包软件抓到的。
+当然这个问题也是可以解决的，我们只要利用 字节码修改技术 直接修改 字节码即可。 这里就不多介绍了，有兴趣的可以自己实现。
+使用了no_proxy 真的就抓不到了吗？
+当然不是，解决问题的方法就很多，最简单的就是使用drony这个软件，模拟一个vpn网络 即可。 原理很简单，让流量走到vpn里面，
+然后vpn默认使用代理 即可。
+
+作者：DK_BurNIng
+链接：https://juejin.im/post/6860818685763223565
+来源：掘金
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
