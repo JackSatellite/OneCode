@@ -1,0 +1,128 @@
+主要来源：
+
+1. 每周我都会收到很多投稿邮件，其中有一些非常不错的文章，因为篇幅或者源码片段过多的原因不太适合推送，决定单独分享给大家。
+
+2. 偶尔也会收到一些项目的投稿，项目readme是不适合直接推送的，但是优质的项目我也是愿意分享给大家的。
+
+3. 我自己看到的一些优质的文章以及github热门项目。
+
+1. Mock你的数据，放个大招
+
+https://www.jianshu.com/p/654961493846
+
+文章提供了一个Mock 数据的解决方案，并且以okhttps为例，将整个项目嵌入实际项目。
+
+mock api使用的是：
+
+https://www.easy-mock.com/
+
+
+
+比wanandroid的mockapi强大很多。
+
+2. 开源一个自用的Android IM库
+
+https://www.jianshu.com/p/00ba0ac2fc96
+
+这是一篇非常棒的文章，作者从事直播、即时通讯、短视频等项目3，4年，有这样经历的作者来开源一个IM库是可遇不可求的。
+
+项目地址：
+
+https://github.com/FreddyChen/NettyChat
+
+文章包含：
+
+本文将介绍：
+
+Protobuf序列化
+TCP拆包与粘包
+长连接握手认证
+心跳机制
+重连机制
+消息重发机制
+读写超时机制
+离线消息
+线程池
+3. 一份涵盖大部分Java程序员所需要掌握的核心知识
+
+https://github.com/Snailclimb/JavaGuide
+
+
+
+长期霸占github日榜，目前star 3W+。
+
+4. 每天一道Android 面试题
+
+https://github.com/Moosphan/Android-Daily-Interview
+
+
+
+以issue的形式每天和大家一起解决一道Android 面试题，之前已经给大家推荐过一次了。
+
+5. Git的奇技和技巧
+
+https://github.com/git-tips/tips
+
+
+
+主要介绍各种git技巧与用法，文章中也给大家介绍了入门的github教程。
+
+6. 一些名校课程
+
+最近Github日榜出现了不少名校课程资料分享，挺神奇的。
+
+浙江大学课程攻略共享计划
+
+https://github.com/QSCTech/zju-icicles
+
+清华大学计算机系课程攻略
+
+https://github.com/PKUanonym/REKCARC-TSC-UHT
+
+贵校课程资料整理
+
+https://github.com/lib-pku/libpku
+
+上海交通大学课程资料分享
+
+https://github.com/CoolPhilChen/SJTU-Courses
+
+
+
+7. 开发效率提升：Mac生产力工具链推荐
+
+https://github.com/Louiszhai/tool
+
+分享一些MAC上高效的软件，工欲善其事必先利其器!
+
+
+
+8. Google 工程师中文演讲 | 深入了解 Flutter 的高性能图形渲染
+
+https://www.bilibili.com/video/av48772383
+
+
+
+https://go2url.cn/gdd-flutter-yuqian-slide
+
+Google Flutter 团队的工程师 Yuqian Li 将为你介绍 Flutter 的高性能渲染原理，以及遇到 Flutter 性能相关问题的时候如何调试。
+
+B站快要成为一个学习站点啦，不要忽视哟！
+
+9. 计算机科学速成课（视频）
+
+https://www.yuque.com/computer/crush-course
+
+我们要学很多东西，但预先说明，我们 *不会* 教你怎么编程，我们会从高层次上纵览一系列计算机话题。
+
+
+
+有时间看一看，会让你对计算机的了解更加深入。
+
+本来准备周一头条告知下这个系列的，不过刚好有和码云有一个合作，想让更多人了解码云，就放到二条了，大家也可以关注下头条的文章，那么如果你能看到这条，就属于缘分啦。
+
+后续这个系列每周或者两周都会出现，希望到年底有一条年终总结：
+
+开启技术分享周刊，更新了几十期
+
+如果觉得这个系列不错，可以右下角点个在看，了解下受欢迎程度
