@@ -1,1 +1,66 @@
+ api 'com.youth.banner:banner:2.0.4'
+    api 'com.github.lygttpod:SuperTextView:2.1.6'
+    api 'com.wang.avi:library:2.1.3'
+    api 'com.github.angcyo.DslTablayout:TabLayout:1.4.4'
+    api 'com.github.donkingliang:LabelsView:1.5.0'
+    api('io.socket:socket.io-client:1.0.0') {
+        exclude group: 'org.json', module: 'json'
+    }
+    // 角标 控件
+    api 'q.rorbin:badgeview:1.1.3'
+    api 'com.zzhoujay.richtext:richtext:3.0.8'//加载富文本  视频待确认
+    // 图片、视频选择器
+    api 'com.github.LuckSiege.PictureSelector:picture_library:v2.5.8'
+    //  滚轮选择器（时间、日期、地址）
+    api('com.github.gzu-liyujiang.AndroidPicker:WheelPicker:1.5.6.20181018') {
+        exclude group: "com.android.support"
+    }
+  //  滚轮选择器
+    api 'com.contrarywind:Android-PickerView:4.1.9'
 
+ 
+    //自定义标签
+//    api 'com.github.chengzhicao:ChannelView:v1.1.1'
+    //  recycleview  浮动布局
+    api 'com.google.android:flexbox:2.0.1'
+   
+    //圆角 圆形图片
+    api 'com.github.SheHuan:NiceImageView:1.0.5'//todo
+    api 'com.ryan.rv_gallery:rv-gallery:1.1.2'
+    //视频图片混合轮播
+    api 'com.github.ZkLeaf:ZBanner:1.0.5'
+    // 评价 图标
+    api 'me.zhanghai.android.materialratingbar:library:1.4.0'
+    //图表
+    api 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    //音频录制波纹效果
+//    api 'com.github.ideastudios:IdealRecorder:1.0.3'//待定
+    api 'com.github.CarGuo:GSYRecordWave:2.0.1'// TODO 开发中
+    //扫码
+    //implementation 'cn.bingoogolapple:bga-qrcode-zxing:latestVersion'
+    api 'cn.bingoogolapple:bga-qrcode-zxing:1.3.7'
+    //流式布局
+    api 'com.hyman:flowlayout-lib:1.1.2'
+    //日历
+    api 'com.haibin:calendarview:3.6.9'
+    //银联
+    api files('libs\\UPPayAssistEx.jar')
+    api files('libs\\UPPayPluginExPro.jar')
+    //暂定饺子播放器
+//    api 'cn.jzvd:jiaozivideoplayer:7.0.4'
+    api 'cn.jzvd:jiaozivideoplayer:7.4.2'
+    //阿里fastjson
+    api 'com.alibaba:fastjson:1.2.12'
+    
+     api 'com.kongzue.dialog_v3x:dialog:3.1.5'
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.47'
+    // 上拉加载，下拉刷新
+    api "com.scwang.smartrefresh:SmartRefreshLayout:1.1.0"
+    api "com.scwang.smartrefresh:SmartRefreshHeader:1.1.0"
+    
+    
+    
+    
+    
+    
+    
