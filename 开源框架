@@ -57,7 +57,11 @@
     // 上拉加载，下拉刷新
     api "com.scwang.smartrefresh:SmartRefreshLayout:1.1.0"
     api "com.scwang.smartrefresh:SmartRefreshHeader:1.1.0"
-    
+    // 滑块验证
+    implementation 'com.luozm.captcha:captcha:1.1.2'
+    implementation 'com.lxj:xpopup:1.8.7'
+    //仿支付宝密码输入框、微信密码输入框,美团外卖验证码输入框
+    implementation 'com.github.WGwangguan:SeparatedEditText:v1.2'
     
     
     
