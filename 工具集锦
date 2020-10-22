@@ -153,3 +153,397 @@ https://bugly.qq.com/v2/
 uniapp 国内跨平台开发框架（包括ios,android ,各类小程序）
 学习教程：https://uniapp.dcloud.io/resource --- 如何学习，里面有各种的教程 
 
+
+
+
+Android  Tv  
+Tv 工具集锦
+https://gitee.com/kumei/Android_tv_libs
+
+android tv 相关的库，包括界面开发，播放器等等的收集，
+
+我并无法保证全部加入，必定会遗漏一些优秀的TV相关的库，
+
+欢迎大家一起往里面添砖加瓦.
+
+TV开发 QQ群1：522186932 QQ群2:468357191
+
+android tv交流网站: www.androidtvdev.com
+
+android tv文章专题：https://www.jianshu.com/c/3f0ab61a1322
+
+我的个人博客：https://blog.csdn.net/qw85525006/category_6228458.html [欢迎一起学习]
+
+玩转Android，每日优质文章推荐：https://www.wanandroid.com/
+
+网站导航
+
+[TOC]
+
+一. 控件
+Leanback相关：
+1.谷歌 leanback demo
+项目地址：https://github.com/googlesamples/leanback-showcase
+
+谷歌原生的 leanback demo，看完此demo，基本就懂如何使用了.
+
+leanback很灵活，主要是MVP的思想.
+
+
+
+2.V14Leanback
+项目地址：https://github.com/DukerSunny/V14Leanback
+
+该项目主要是将leanback代码复制出来了.
+
+一个适用于Android TV端的分页加载列表库，控件继承自RecyclerView，部分源码抽取自Google Support v17 Leanback包下源码，可兼容低版本环境。
+
+3.Leanback修改代码
+项目地址：https://github.com/FrozenFreeFall/Leanback_tv_widget
+
+项目只修改了一些代码.
+
+
+
+5. BrowseFragment 自定义
+项目地址：https://github.com/dextorer/Sofa
+
+A library for Android TV that extends the Leanback library functionalities
+
+对 Leanback 库的BrowseFragment 进行自定义，让一个 Header对应一个页面。不过最新 Leanback 库已经支持该功能。
+
+
+
+4.TwoWayView
+项目地址：https://github.com/lucasr/twoway-view
+
+此项目可以配合leanback使用，嵌入1 N 布局，需要修改leanback源码.
+
+
+
+RecyclerView相关：
+1. CustomTvRecyclerView
+项目地址：https://github.com/songwenju/CustomTvRecyclerView
+
+该项目实现了 RecyclerView 按键翻页效果，可以参考代码并使用.
+
+
+
+2. TVRecyclerView
+项目地址：https://github.com/Fredlxy/TVRecyclerView
+
+封装过的RecyclerView，用于TV开发，
+
+3. TvRecyclerView--针对TV端特性进行的适配与开发
+项目地址：https://github.com/zhousuqiang/TvRecyclerView
+
+此项目在TwoWayView的基础上进行的改进，支持焦点快速移动，支持Item选中放大时不被叠压(无需手动调用bringChildToFront())，支持横/竖排列，支持设置选中Item边缘距离/居中，支持设置横竖间距，Item监听回调
+
+
+
+4. TvRecyclerView
+项目地址：https://github.com/henryblue/TvRecyclerView
+
+用在android TV端的自定义recyclerView控件, 不支持手机端.
+
+
+
+4. VLayout
+项目地址：https://github.com/FrozenFreeFall/vlayout
+
+这么说的，虽然只是移动端，并不支持TV端，但是此控件的思想不错，也避免了leanback在低配机器耗性能的问题(Recyclerview嵌套)，修改支持TV端，是一个神器.
+
+
+
+5. tangram
+项目地址：https://github.com/alibaba/tangram-android
+
+项目相关文章：https://mp.weixin.qq.com/s/S1yP_RSgDfqFSbuDImrpuw
+
+使用JSON的数据格式来加载界面，很有参考和学习的代码.
+
+适配库：
+AndroidAutoSize
+项目地址：https://github.com/JessYanCoding/AndroidAutoSize
+
+1. AutoLayout
+项目地址：https://github.com/hongyangAndroid/AndroidAutoLayout
+
+文章: https://blog.csdn.net/lmj623565791/article/details/49990941
+
+作者暂时不维护了，为了支持没有的控件或者未知函数，需要改一些东西.
+
+使用的很简单，添加设计图分辨率，使用PX... ...
+
+2.SupportMultipleScreensUtil
+项目地址：https://github.com/baixiaoY/SupportMultipleScreensUtil
+
+调用方便，只需要调用它的转换函数就OK了.
+
+3. AutoUtils
+项目地址: https://gitee.com/kumei/android-tv-frame-new/blob/develop/tv-widget/common/src/main/java/com/open/common/AutoUtils.java
+
+手动写适配，简单易用
+
+4.工具生成values
+工具地址：https://gitee.com/kumei/AndroidTVWidget/tree/master/Tool
+
+这种方式不建议使用了，新出的机型分辨率需要重新生成，pass吧.
+
+4.ConstraintLayout
+Android新出的约束，也可以用于部分适配，还是不错，也能优化界面的布局，避免嵌套太深.
+
+TV框架：
+###1. Android tv metro
+
+项目地址：https://gitee.com/kumei/android_tv_metro
+
+此项目由开源社区修改，可编译版本，并添加了代码分析注释，原始源码自行下载.
+
+在此重点说明下：tv metro的架构思想和部分代码是很有参考价值的，布局是动态生成的.
+
+2. Android tv frame
+项目地址：https://gitee.com/kumei/AndroidTVWidget
+
+最新项目重构地址：https://gitee.com/kumei/android-tv-frame-new
+
+此项目包含了 移动边框，键盘，listview, gridview, recylerview等等
+
+
+
+3. tv widget
+项目地址：https://github.com/evilbinary/TvWidget
+
+此项目可以库使用，也可以作为代码学习，还是不错.
+
+
+
+3.移动边框BorderViewDemo
+项目地址：https://github.com/lf8289/BorderViewDemo
+
+4. Android Tv 焦点框框架; 支持设置颜色或图片作为焦点框; 支持圆角变化
+项目地址：https://github.com/zhousuqiang/TvFocusBorder
+
+
+
+5. Android Tv Widget Demo
+项目地址: https://github.com/zhousuqiang/TvWidget
+
+
+
+Launcher源码：
+1. SMTVLauncher
+项目地址：https://github.com/FrozenFreeFall/SMTVLauncher
+
+
+
+2. AndroidTVLauncher
+项目地址：https://github.com/JackyAndroid/AndroidTVLauncher
+
+此项目基于 Leanback，可以参考参考别人使用leanback的代码.
+
+
+
+3. TVSample
+项目地址：https://github.com/hejunlin2013/TVSample
+
+两个 TV Launcher 页面例子：
+
+1、仿泰捷视频最新TV版 Metro UI。
+
+2.仿腾讯视频 TV 版(云视听·极光) 列表页(用 RecycleView + GridLayoutManager 实现)
+
+![](https://github.com/hejunlin2013/TVSample/raw/master/images/device-2016-10-13-191954.png）
+
+4. Leanback桌面demo
+项目地址: https://gitee.com/chuangshiji/Launcher
+
+动画库:
+设计师与工程师 动效 协作 工具
+项目地址：https://gitee.com/hailongqiu/directTool
+
+输入图片说明
+
+属性动画封装后 OpenAnim
+项目地址: https://gitee.com/kumei/OpenAnim
+
+SVG动画
+项目地址: https://github.com/alexjlockwood/adp-delightful-details
+
+
+
+项目地址：https://github.com/Pixplicity/sharp
+
+recyclerview-animators 动画库
+项目地址: https://github.com/wasabeef/recyclerview-animators
+
+转场动画
+项目地址: https://github.com/lgvalle/Material-Animations
+
+其它View相关：
+1.阴影控件
+项目地址：https://github.com/yingLanNull/ShadowImageView
+
+
+
+2. 简单的阴影控件
+项目地址：https://github.com/lijiankun24/ShadowLayout
+
+
+
+2.角标控件
+项目地址: https://github.com/H07000223/FlycoLabelView，https://github.com/linger1216/labelview
+
+
+
+3. 圆角控件
+项目地址: https://github.com/Y-bao/RoundAngleFrameLayout
+
+输入图片说明
+
+4. 星级控件
+项目地址: https://github.com/DreaminginCodeZH/MaterialRatingBar
+
+
+
+主题切换
+项目地址：https://github.com/fengjundev/Android-Skin-Loader 使用APK资源resource加载流
+
+项目地址：https://github.com/ximsfei/Android-skin-support Resource替换流的解决方案
+
+二. 播放器
+1.UPYUN Android 流媒体播放器
+项目地址:https://github.com/upyun/android-player-sdk
+
+android-player-sdk 是一个适用于 Android 平台的影音播发器 SDK ，基于 ijkplayer ( based on ffplay )，可高速定制化和二次开发，为 Android 开发者提供简单，快捷的接口。
+
+2.GSYVideoPlayer
+项目地址：https://github.com/CarGuo/GSYVideoPlayer
+
+视频播放器（IJKplayer），HTTPS支持，支持弹幕，支持滤镜、水印、gif截图，片头广告、中间广告，多个同时播放，支持基本的拖动，声音、亮度调节，支持边播边缓存，支持视频本身自带rotation的旋转（90,270之类），重力旋转与手动旋转的同步支持，支持列表播放 ，直接添加控件为封面，列表全屏动画，视频加载速度，列表小窗口支持拖动，5.0的过场效果，调整比例，多分辨率切换，支持切换播放器，进度条小窗口预览，其他一些小动画效果，rtsp、concat、mpeg。简书:http://www.jianshu.com/p/9fe377dd9750
+
+
+
+3.ExoPlayer
+项目地址：https://github.com/google/ExoPlayer/
+
+4. vitamio https://www.vitamio.org/ 个人免费，商用收费，请注意.
+三. TV输入法
+1.台湾注音输入法，使用注音引擎，可替换拼音或者其它的引擎.
+项目地址: https://gitee.com/kumei/xgimi_zhuyin_input
+
+2. 原生的谷歌输入法，可单独编译版本.
+项目地址:https://gitee.com/kumei/PinyinIME_GOOGLE
+
+3. 英文输入法.高仿搜狗界面.
+项目地址:https://gitee.com/kumei/OpenInputMethod
+
+四. 其它
+P2P下载库
+官网地址：http://www.cdnbye.com/
+
+在这里插入图片描述
+
+AOP轻量级框架
+项目地址：https://github.com/eleme/lancet
+
+AdbLib
+项目地址：https://github.com/cgutman/AdbLib
+
+缓存库 DiskLruCache
+项目地址：https://github.com/JakeWharton/DiskLruCache
+
+1. 反射库
+项目地址：https://github.com/jOOQ/jOOR
+
+很方便的使用反射函数，简单，高效，一行代码搞定反射调用，不用写很多代码
+
+2.进程间通信库Hermes
+项目地址：https://github.com/Xiaofei-it/Hermes-IPC-Demo
+
+项目地址：https://github.com/Xiaofei-it/Hermes
+
+项目地址：https://github.com/elemers/HermesEventBus 跨进程通信的eventbus
+
+3.基于JSON RPC的一种Android跨进程调用
+文章解读：https://www.jianshu.com/p/1eca5e32fad2?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io
+
+项目地址：https://github.com/iqiyi/Andromeda
+
+4. 权限管理SDK
+项目地址:https://github.com/yanzhenjie/AndPermission
+
+官方网站:http://yanzhenjie.github.io/AndPermission/cn
+
+5. HDMI DEMO
+项目地址：https://gitee.com/kumei/TIFSample
+
+博客地址：http://www.jianshu.com/p/385c92fceb16
+
+6. 缓存库
+项目地址： https://gitee.com/hailongqiu/DiskLruCache
+
+zxing 二维码
+项目地址：https://github.com/zxing/zxing
+
+五. 工具
+1. 运营类相关：
+诸葛IO：https://zhugeio.com/
+
+神策数据：https://www.sensorsdata.cn/auto
+
+2.研发体系相关：
+Bmob 后端云，全方位一体化的后端服务平台：https://www.bmob.cn/
+
+蒲公英：https://www.pgyer.com/
+
+蓝湖，高效 的产品，设计，研发 协作平台:https://www.lanhuapp.com/
+
+PerfDog性能测试分析平台：https://perfdog.qq.com/
+
+代码托管平台，码云：https://gitee.com/
+
+一站式 DevOps 提升研发效能：https://coding.net/
+
+Github代码托管:https://github.com/
+
+x. 其它
+阴影生成工具: https://inloop.github.io/shadow4android/
+
+思考框架图绘制工具：http://boomar.cn/ 比如 时间管理，SWOT分析，5W2H分析，复盘等等
+
+六. 网络相关
+RxHttp
+项目地址：https://github.com/liujingxing/RxHttp
+
+DroidDLNA相关
+项目地址：https://github.com/offbye/DroidDLNA https://github.com/4thline/cling
+
+MiniThunder
+android迷你版迅雷，支持thunder:// ftp:// http:// ed2k:// 磁力链 种子文件的下载，音视频文件支持边下边播.
+
+项目地址：https://gitee.com/kumei/MiniThunder
+
+nanohttpd 轻量级的 HTTP server
+项目地址：https://github.com/NanoHttpd/nanohttpd
+
+1. 远程控制你的智能电视，按键|输入|安装App等都已实现.
+项目地址：https://github.com/kingthy/TVRemoteIME
+
+文章地址：https://juejin.im/post/5a9e47636fb9a028c42db81d
+
+2. OkGo，一个专注于让网络请求更简单的框架，与RxJava完美结合，比Retrofit更简单易用。
+项目地址：https://github.com/jeasonlzy/okhttp-OkGo
+
+文章地址：https://www.jianshu.com/p/6aa5cb272514
+
+3. 投屏SDK ConnectSDK，在其中对大部分协议做了支持。
+To communicate with discovered devices, Connect SDK integrates support for protocols such as DLNA , DIAL , SSAP , ECG , AirPlay , Chromecast , UDAP , and webOS second screen protocol. Connect SDK intelligently picks which protocol to use depending on the feature being used.
+
+官网：connectsdk.com/
+
+Github：github.com/connectsdk
+
+
+
+
